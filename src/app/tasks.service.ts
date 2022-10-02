@@ -12,8 +12,8 @@ export class TasksService {
       priority: "red", 
       category: "homecare", 
       points: 15, 
-      created_date: "2022-10-01",
-      due_date: "2022-10-03",
+      created_date: new Date(2022, 10, 1),
+      due_date: new Date(2022, 10, 2),
       recurring: false
     },
     { id: 2, 
@@ -22,9 +22,9 @@ export class TasksService {
       priority: "red", 
       category: "hobbies", 
       points: 50, 
-      created_date: "2022-10-01",
-      due_date: null,
-      recurring_: true
+      created_date: new Date(2022, 10, 1),
+      due_date: new Date(2022, 10, 1),
+      recurring: true
     },
     { id: 3, 
       short_description: "Pay credit card bill", 
@@ -32,11 +32,20 @@ export class TasksService {
       priority: "green", 
       category: "bills", 
       points: 25, 
-      created_date: "2022-10-01",
-      due_date: "2022-10-30"
+      created_date: new Date(2022, 10, 1),
+      due_date: new Date(2022, 10, 30),
+      recurring: false
     },
 
   ];
 
   constructor() { }
+
+  public getTasks() : Array<{id: number, short_description: string, long_description: string, priority: string, category: string, points: number, created_date: Date, due_date: Date, recurring: boolean}> {
+    return this.tasks;
+  }
+
+  public createTask(task: { id: number, short_description: string, long_description: string, priority: string, category: string, points: number, created_date: Date, due_date: Date, recurring: boolean }) {
+    this.tasks.push(task);
+  }
 }
