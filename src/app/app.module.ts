@@ -9,6 +9,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 import { FooterComponent } from './footer/footer.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     TasksComponent,
     HomeComponent,
     AccountComponent,
-    FooterComponent
+    FooterComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
