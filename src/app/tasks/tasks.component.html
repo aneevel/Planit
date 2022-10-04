@@ -2,7 +2,7 @@
     <h1 class="text-center">Tasks</h1>
     <hr/>
     <ul class="tasks d-flex flex-column justify-content-center" style="list-style: none">
-        <li *ngFor="let task of tasks" class="col-12 align-center">
+        <li *ngFor="let task of tasks" class="col-12 align-center p-4">
             <app-task [task]=task></app-task>
         </li>
     </ul>
