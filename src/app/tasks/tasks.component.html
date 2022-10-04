@@ -1,8 +1,8 @@
 <div class="container" style="margin-top: 10vh">
     <h1 class="text-center">Tasks</h1>
     <hr/>
-    <ul class="tasks" style="list-style: none">
-        <li *ngFor="let task of tasks">
+    <ul class="tasks d-flex flex-column justify-content-center" style="list-style: none">
+        <li *ngFor="let task of tasks" class="col-12 align-center">
             <app-task [task]=task></app-task>
         </li>
     </ul>
