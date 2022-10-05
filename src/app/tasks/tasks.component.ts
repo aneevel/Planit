@@ -8,7 +8,7 @@ import { TasksService } from '../tasks.service';
 })
 export class TasksComponent implements OnInit {
 
-  tasks: Array<{id: number, short_description: string, long_description: string, priority: string, category: string, points: number, created_date: Date, due_date: Date, recurring: boolean}>;
+  tasks: Array<Task> = {};
 
   constructor(public tasksService: TasksService) { 
     this.tasks = this.tasksService.getTasks();

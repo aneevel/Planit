@@ -17,7 +17,7 @@ export class Task {
         points: number, 
         created_date: Date, 
         due_date: Date, 
-        recurring: false)
+        recurring: boolean)
     {
         this.id = id;
         this.short_description = short_description;
